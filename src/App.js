@@ -8,24 +8,9 @@ const App = () => {
   return (
     <div>
       <Header/>
-      {/* <MainMenu items={items}/> */}
-      {/* <DynamicMenu items={items}  moreitems={moreitems}/> */}
       <Body />
     </div>
   );
 };
 
 export default App;
-
-{
-  /*
-
- header
-  logo
-  components
-  search
- body
-  carousel
-
-*/
-}
