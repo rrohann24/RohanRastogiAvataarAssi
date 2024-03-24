@@ -7,19 +7,26 @@
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
-  
+
+   
     .menu {
       display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0;
+
+      ul{
+        gap: 44px;
+      }
   
       li {
         margin-right: 20px;
         cursor: pointer;
+        
         &:last-child {
           margin-right: 0;
         }
+
       }
   
       .more {
@@ -40,6 +47,7 @@
   
         li {
           margin: 5px 0;
+          
         }
       }
     }
@@ -57,18 +65,18 @@
       }
     }
   
-    @media screen and (max-width: 768px) {
-      .menu {
-        display: block;
-        li {
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-      }
+    // @media screen and (max-width: 768px) {
+    //   .menu {
+    //     display: block;
+    //     li {
+    //       margin-right: 0;
+    //       margin-bottom: 10px;
+    //     }
+    //   }
   
-      .more-items {
-        display: none;
-      }
-    }
+    //   .more-items {
+    //     display: none;
+    //   }
+    // }
   }
   

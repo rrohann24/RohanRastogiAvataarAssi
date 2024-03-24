@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './DynamicMenu.scss';
 
-const DynamicMenu = ({ items }) => {
+const DynamicMenu = ({ items, moreitems }) => {
   const [menuItems, setMenuItems] = useState([]);
   const [moreItems, setMoreItems] = useState([]);
 
@@ -30,27 +30,7 @@ const DynamicMenu = ({ items }) => {
 
       setMenuItems(updatedMenuItems);
       setMoreItems(updatedMoreItems);
-    }else if (screenWidth <= 425) {
-        // If screen size is less than or equal to 768px
-        // Move items to "More" section if they don't fit one by one
-        const menuWidth = document.getElementById('menu').offsetWidth;
-        let remainingWidth = menuWidth;
-        const updatedMenuItems = [];
-        const updatedMoreItems = [];
-  
-        for (let i = 0; i < items.length-1; i++) {
-          const itemWidth = getTextWidth(items[i].label);
-          if (itemWidth <= remainingWidth) {
-            updatedMenuItems.push(items[i]);
-            remainingWidth -= itemWidth;
-          } else {
-            updatedMoreItems.push(items[i]);
-          }
-        }
-  
-        setMenuItems(updatedMenuItems);
-        setMoreItems(updatedMoreItems);
-      }  else {
+    }else {
       // If screen size is larger than 768px
       // Move items from "More" section back to main menu
       setMenuItems(items);
@@ -59,7 +39,7 @@ const DynamicMenu = ({ items }) => {
   };
 
   useEffect(() => {
-    setMenuItems(items);
+    setMenuItems(moreitems);
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

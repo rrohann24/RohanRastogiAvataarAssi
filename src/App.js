@@ -1,23 +1,15 @@
-// App.js (or any other component where you're rendering the menu)
-
-import React from 'react';
-import DynamicMenu from './components/DynamicMenu';
-import Body from './components/Body';
+import React from "react";
+import Body from "./components/Body";
+import MainMenu from "./components/MainMenu";
+import Header from "./components/Header";
 
 const App = () => {
-  const items = [
-    { label: "HOME" },
-    { label: "ELECTRONICS" },
-    { label: "BOOKS" },
-    { label: "MUSIC" },
-    { label: "MOVIES" },
-    { label: "CLOTHING" },
-    { label: "GAMES" },
-  ];
 
   return (
     <div>
-      <DynamicMenu items={items} />
+      <Header/>
+      {/* <MainMenu items={items}/> */}
+      {/* <DynamicMenu items={items}  moreitems={moreitems}/> */}
       <Body />
     </div>
   );
@@ -25,9 +17,8 @@ const App = () => {
 
 export default App;
 
-{/*
-
-
+{
+  /*
 
  header
   logo
@@ -36,4 +27,5 @@ export default App;
  body
   carousel
 
-*/}
+*/
+}
