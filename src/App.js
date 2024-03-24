@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js (or any other component where you're rendering the menu)
 
-function App() {
+import React from 'react';
+import DynamicMenu from './components/DynamicMenu';
+import Body from './components/Body';
+
+const App = () => {
+  const items = [
+    { label: "HOME" },
+    { label: "ELECTRONICS" },
+    { label: "BOOKS" },
+    { label: "MUSIC" },
+    { label: "MOVIES" },
+    { label: "CLOTHING" },
+    { label: "GAMES" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DynamicMenu items={items} />
+      <Body />
     </div>
   );
-}
+};
 
 export default App;
+
+{/*
+
+
+
+ header
+  logo
+  components
+  search
+ body
+  carousel
+
+*/}
