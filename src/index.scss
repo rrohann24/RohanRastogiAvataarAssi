@@ -49,8 +49,21 @@ body {
 
 .heading {
   padding: 1rem 0;
-  font-size: 3.5rem;
+  font-size: 5rem;
   text-align: center;
+  font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.heading2 {
+  padding-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .swiper_container {
@@ -134,4 +147,10 @@ body {
   .swiper-pagination-bullet-active {
     background: var(--primary);
   }
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }

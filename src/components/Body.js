@@ -20,6 +20,7 @@ function Body() {
   return (
     <div className="container">
       <h1 className="heading"> Featured Products</h1>
+      <p className="heading2">Explore and discover a variety of product</p>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
