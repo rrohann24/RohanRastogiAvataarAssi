@@ -1,0 +1,32 @@
+// SearchBar.scss
+
+.search-bar {
+    width: 50px;
+    /* Set the desired width */
+    height: 33px;
+    /* Set the desired height */
+    padding: 0px ;
+    /* Adjust padding as needed */
+    display: flex;
+    gap: 1px;
+    border-bottom: 1px solid white;
+    /* Add a bottom border */
+    opacity: 1;
+    /* Set the desired opacity */
+
+    input {
+        flex: 1;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    .search-icon {
+        font-size: 4rem;
+        color:white;
+    }
+}

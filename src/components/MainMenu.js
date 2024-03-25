@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MenuItem from "./MenuItem";
 import MoreSection from "./MoreSection";
 import "./MainMenu.scss";
-
+import SearchBar from "./SearchBar";
 const MainMenu = ({ items }) => {
   const [visibleItems, setVisibleItems] = useState(items.slice(0, 6));
   const [moreItems, setMoreItems] = useState(items.slice(6));
@@ -44,7 +44,7 @@ const MainMenu = ({ items }) => {
         ))}
         {moreItems.length > 0 && <MoreSection items={moreItems} />}
       </ul>
-      <div className="search-bar">Search</div>
+      <SearchBar/>
     </div>
   );
 };

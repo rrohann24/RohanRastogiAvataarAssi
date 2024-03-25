@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./DynamicMenu.scss";
+import SearchBar from "./SearchBar";
 const DynamicMenu = ({ items, moreitems }) => {
   const [menuItems, setMenuItems] = useState([]);
   const [moreItems, setMoreItems] = useState([]);
@@ -69,7 +70,7 @@ const DynamicMenu = ({ items, moreitems }) => {
           </li>
         )}
       </ul>
-      <div className="search-bar">Search Bar</div>
+      <SearchBar/>
     </div>
   );
 };
