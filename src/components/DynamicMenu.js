@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./DynamicMenu.scss";
-
 const DynamicMenu = ({ items, moreitems }) => {
   const [menuItems, setMenuItems] = useState([]);
   const [moreItems, setMoreItems] = useState([]);
@@ -55,7 +54,9 @@ const DynamicMenu = ({ items, moreitems }) => {
       <div className="logo">Your Logo</div>
       <ul id="menu" className="menu">
         {menuItems.map((item, index) => (
-          <li key={index}>{item.label}</li>
+          <li key={index}>
+            {item.label}
+          </li>
         ))}
         {moreItems.length > 0 && (
           <li className="more">
